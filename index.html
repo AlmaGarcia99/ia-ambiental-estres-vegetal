@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA Ambiental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .background{
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at top left,#0f2d5c 0%,transparent 30%),
+      radial-gradient(circle at bottom right,#003b2f 0%,transparent 30%),
+      linear-gradient(180deg,#050816 0%,#071426 100%);
+      z-index:-2;
+    }
+
+    .grid{
+      position:fixed;
+      inset:0;
+      background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size:40px 40px;
+      z-index:-1;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+    }
+
+    .hero{
+      max-width:1100px;
+      text-align:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:10px 18px;
+      border:1px solid rgba(0,255,200,0.3);
+      border-radius:999px;
+      color:#7cf7d4;
+      background:rgba(0,255,200,0.08);
+      margin-bottom:30px;
+      font-size:14px;
+      letter-spacing:1px;
+    }
+
+    h1{
+      font-size:clamp(3rem,8vw,6rem);
+      line-height:1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .gradient{
+      background:linear-gradient(90deg,#63b3ff,#00ffc8);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .subtitle{
+      max-width:850px;
+      margin:auto;
+      font-size:1.3rem;
+      line-height:1.8;
+      color:#b8c4d9;
+    }
+
+    .buttons{
+      margin-top:45px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 28px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      transition:0.3s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#0099ff,#00ffc8);
+      color:#021018;
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.15);
+      color:white;
+      background:rgba(255,255,255,0.04);
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 30px rgba(0,255,200,0.15);
+    }
+
+    section{
+      max-width:1200px;
+      margin:auto;
+      padding:100px 30px;
+    }
+
+    .section-title{
+      font-size:3rem;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .section-text{
+      color:#b5c2d8;
+      line-height:1.9;
+      font-size:1.1rem;
+      max-width:900px;
+    }
+
+    .cards{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:24px;
+      padding:30px;
+      backdrop-filter:blur(10px);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(0,255,200,0.3);
+    }
+
+    .card h3{
+      margin:18px 0;
+      font-size:1.4rem;
+    }
+
+    .card p{
+      color:#aab7cf;
+      line-height:1.7;
+    }
+
+    .icon{
+      font-size:2rem;
+    }
+
+    .tech-stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:35px;
+    }
+
+    .tech{
+      padding:12px 18px;
+      border-radius:12px;
+      background:rgba(0,255,200,0.08);
+      border:1px solid rgba(0,255,200,0.2);
+      color:#89ffe0;
+      font-weight:600;
+    }
+
+    .prediction{
+      margin-top:50px;
+      background:linear-gradient(135deg,#0d1c34,#092a28);
+      border-radius:30px;
+      padding:50px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .code{
+      margin-top:25px;
+      background:#02050d;
+      padding:25px;
+      border-radius:18px;
+      overflow:auto;
+      color:#7cf7d4;
+      font-family:monospace;
+      line-height:1.8;
+    }
+
+    footer{
+      text-align:center;
+      padding:60px 20px;
+      color:#7f8ba3;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:3.2rem;
+      }
+
+      .section-title{
+        font-size:2.3rem;
+      }
+
+      .subtitle{
+        font-size:1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="background"></div>
+<div class="grid"></div>
+
+<header>
+  <div class="hero">
+
+    <div class="tag">
+      🌱 IA Ambiental • Machine Learning • Prevención Ecológica
+    </div>
+
+    <h1>
+      Del <span class="gradient">Estrés Vegetal</span><br>
+      a la Prevención de Incendios Forestales
+    </h1>
+
+    <p class="subtitle">
+      Proyecto experimental de Inteligencia Artificial enfocado en analizar variables ambientales como humedad, temperatura y viento para detectar patrones de riesgo ecológico y construir sistemas preventivos basados en datos.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="https://github.com/AlmaGarcia99/ia-ambiental-estres-vegetal" target="_blank">
+        Ver Proyecto
+      </a>
+
+      <a class="btn btn-secondary" href="https://github.com/AlmaGarcia99/ia-ambiental-estres-vegetal/blob/main/analisis_ia_ambiental.ipynb" target="_blank">
+        Abrir Notebook
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<section>
+
+  <h2 class="section-title">
+    🌌 Visión del Proyecto
+  </h2>
+
+  <p class="section-text">
+    Este proyecto nace desde una idea simple: una planta puede mostrar señales de estrés antes de deteriorarse.
+    
+    Utilizando Inteligencia Artificial, análisis ambiental y Machine Learning, el objetivo es detectar patrones críticos antes de que ocurra un problema mayor.
+
+    La misma lógica puede evolucionar posteriormente hacia monitoreo forestal, agricultura inteligente y sistemas de prevención de incendios.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    ⚡ Variables Analizadas
+  </h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Humedad</h3>
+      <p>
+        Monitoreo de humedad del suelo para detectar condiciones de estrés ambiental.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌡️</div>
+      <h3>Temperatura</h3>
+      <p>
+        Análisis térmico ambiental para identificar escenarios de riesgo ecológico.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌬️</div>
+      <h3>Viento</h3>
+      <p>
+        Factor importante en propagación de sequedad y potenciales incendios.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">☀️</div>
+      <h3>Luz Solar</h3>
+      <p>
+        Evaluación de exposición solar y su impacto en condiciones ambientales.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    🤖 Machine Learning
+  </h2>
+
+  <p class="section-text">
+    El sistema utiliza Random Forest Classifier para aprender patrones ambientales y clasificar niveles de riesgo.
+
+    El modelo puede interpretar condiciones críticas y generar alertas preventivas.
+  </p>
+
+  <div class="prediction">
+
+    <h3 style="font-size:2rem;margin-bottom:20px;">
+      🔥 Ejemplo de Predicción
+    </h3>
+
+    <div class="code">
+      nuevo_dato = {<br>
+      &nbsp;&nbsp;"humedad": 35,<br>
+      &nbsp;&nbsp;"temperatura": 30,<br>
+      &nbsp;&nbsp;"viento": 20<br>
+      }<br><br>
+
+      Resultado → [3]<br>
+      Riesgo crítico
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    🛠️ Tecnologías
+  </h2>
+
+  <div class="tech-stack">
+    <div class="tech">Python</div>
+    <div class="tech">Pandas</div>
+    <div class="tech">Scikit-learn</div>
+    <div class="tech">Matplotlib</div>
+    <div class="tech">Jupyter</div>
+    <div class="tech">GitHub Pages</div>
+    <div class="tech">Machine Learning</div>
+    <div class="tech">IA Ambiental</div>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    🌲 Futuro del Proyecto
+  </h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Arduino + Sensores</h3>
+      <p>
+        Integración de sensores reales para monitoreo ambiental en tiempo real.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>IoT Ambiental</h3>
+      <p>
+        Conexión de dispositivos inteligentes para recolección continua de datos.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Prevención Forestal</h3>
+      <p>
+        Escalamiento del modelo hacia detección de riesgo de incendios forestales.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  🌱 IA Ambiental — Tecnología aplicada para comprender y proteger ecosistemas.
+</footer>
+
+</body>
+</html>
