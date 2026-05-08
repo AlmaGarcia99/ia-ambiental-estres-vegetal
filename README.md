@@ -6,17 +6,6 @@
 
 ### Monitoreo ambiental + Machine Learning + Prevención ecológica
 
-<img width="100%" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop"/>
-
-<br>
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine_Learning-0A192F?style=for-the-badge\&logo=tensorflow\&logoColor=00C2FF)
-![Environmental AI](https://img.shields.io/badge/Environmental_AI-0B3D2E?style=for-the-badge\&logo=leaflet\&logoColor=7CFFB2)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge\&logo=Jupyter\&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-121013?style=for-the-badge\&logo=github\&logoColor=white)
-
-</div>
 
 ---
 
@@ -83,7 +72,6 @@ A mayor temperatura:
 * aumenta el estrés ambiental
 * incrementa el riesgo potencial
 
-<img width="100%" src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1600&auto=format&fit=crop"/>
 
 ---
 
