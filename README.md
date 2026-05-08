@@ -1,4 +1,4 @@
-# 🌱🤖 IA Ambiental — Estrés Vegetal y Prevención de Riesgo
+# IA Ambiental — Estrés Vegetal y Prevención de Riesgo
 
 <div align="center">
 
@@ -20,7 +20,7 @@
 
 ---
 
-# 🌌 Visión del Proyecto
+# Visión del Proyecto
 
 Este proyecto explora cómo la Inteligencia Artificial puede utilizarse para detectar condiciones de estrés ambiental antes de que ocurra un problema mayor.
 
@@ -40,7 +40,7 @@ Pero la lógica puede escalar posteriormente hacia:
 
 ---
 
-# 🧠 ¿Qué hace este sistema?
+# ¿Qué hace este sistema?
 
 El modelo analiza patrones ambientales y clasifica niveles de riesgo utilizando Machine Learning.
 
@@ -48,10 +48,10 @@ El modelo analiza patrones ambientales y clasifica niveles de riesgo utilizando 
 
 | Variable        | Descripción           |
 | --------------- | --------------------- |
-| 💧 Humedad      | Humedad del suelo     |
-| 🌡️ Temperatura | Temperatura ambiental |
-| 🌬️ Viento      | Intensidad del viento |
-| ☀️ Luz solar    | Exposición solar      |
+| Humedad      | Humedad del suelo     |
+| Temperatura  | Temperatura ambiental |
+| Viento       | Intensidad del viento |
+| Luz solar    | Exposición solar      |
 
 ---
 
@@ -73,7 +73,7 @@ Prevención
 
 ---
 
-# 📊 Visualización Ambiental
+# Visualización Ambiental
 
 ## Relación entre temperatura y humedad
 
@@ -87,11 +87,11 @@ A mayor temperatura:
 
 ---
 
-# 🤖 Machine Learning
+# Machine Learning
 
 El sistema utiliza:
 
-## 🌳 Random Forest Classifier
+## Random Forest Classifier
 
 El modelo aprende patrones ambientales a partir de datos históricos y clasifica:
 
@@ -104,7 +104,7 @@ El modelo aprende patrones ambientales a partir de datos históricos y clasifica
 
 ---
 
-# 🔥 Ejemplo de Predicción
+# Ejemplo de Predicción
 
 ## Entrada
 
@@ -124,7 +124,7 @@ nuevo_dato = {
 
 ---
 
-# 🌱 Aplicación en plantas
+# Aplicación en plantas
 
 Cuando la IA detecta:
 
@@ -140,7 +140,7 @@ Agregar agua
 
 ---
 
-# 🌲 Aplicación Forestal
+# Aplicación Forestal
 
 La misma lógica puede escalarse a ecosistemas forestales.
 
@@ -159,7 +159,7 @@ Alta probabilidad de incendio forestal
 
 ---
 
-# 🛠️ Tecnologías utilizadas
+# Tecnologías utilizadas
 
 ```text
 Python
@@ -172,7 +172,7 @@ GitHub Pages
 
 ---
 
-# 📂 Estructura del proyecto
+# Estructura del proyecto
 
 ```text
 📁 ia-ambiental-estres-vegetal
@@ -184,10 +184,8 @@ GitHub Pages
 
 ---
 
-# 🚀 Futuras mejoras
+# Futuras mejoras
 
-* sensores reales con Arduino
-* ESP32 + IoT
 * dashboards interactivos
 * APIs climáticas
 * monitoreo satelital
@@ -197,7 +195,7 @@ GitHub Pages
 
 ---
 
-# 🌌 Filosofía del Proyecto
+# Filosofía del Proyecto
 
 La prevención ambiental comienza detectando pequeñas señales antes de que ocurra el desastre.
 
@@ -210,7 +208,7 @@ La Inteligencia Artificial puede ayudarnos a detectar esas señales a tiempo.
 
 <div align="center">
 
-# 🌱 IA + Naturaleza + Prevención
+# IA + Naturaleza + Prevención
 
 ### Tecnología aplicada para comprender y proteger ecosistemas
 
