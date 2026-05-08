@@ -198,6 +198,6 @@ La Inteligencia Artificial puede ayudarnos a detectar esas señales a tiempo.
 
 # IA + Naturaleza + Prevención
 
-### Tecnología aplicada para comprender y proteger ecosistemas
+### Tecnología con propósito
 
 </div>
