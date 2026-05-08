@@ -44,7 +44,7 @@ El modelo analiza patrones ambientales y clasifica niveles de riesgo utilizando 
 
 ---
 
-# ⚡ Pipeline del proyecto
+# Pipeline del proyecto
 
 ```text
 Sensores / Datos
